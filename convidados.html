@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Convidados</title>
+    </head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-family: serif;
+            color: rgb(241, 148, 241);
+        }
+        h2{
+            color: rgb(241, 148, 241);
+        }
+        li::marker{
+            color: rgb(241, 148, 241);
+        }
+        ul{
+            display: inline-block;
+        }
+
+        
+
+    </style>
+    <body>
+
+        <h1>Cadastro de pessoas que visitaram o site</h1>
+
+        <form id="pessoas">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h2>Lista de Pessoas</h2>
+        <ul id="listaPessoas"></ul>
+
+        <script>
+            const form = document.getElementById("pessoas");
+            const lista = document.getElementById("listaPessoas");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const nome = document.getElementById("nome").value;
+
+                const li = document.createElement("li");
+
+                li.textContent = `${nome}`;
+
+                lista.appendChild(li);
+
+                form.reset();
+
+            });
+        </script>
+
+    </body>
+</html>
