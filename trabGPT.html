@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatGPT dos Pobres</title>
+        <link rel="shortcut icon" href="logo/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="imagens/WhatsApp Image 2025-09-08 at 15.28.52.jpeg" type="image/x-icon">
+    </head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        h3{
+            color: plum;
+        }
+        h2{
+            margin-left: 30px;
+            color: plum;
+        }
+        h4{
+            color: rgb(43, 255, 227);
+        }
+        .topicos{
+            text-align: center;
+        }
+        ul{
+            display: inline-block;
+
+        }
+        if{
+            color: white;
+        }
+        li::marker{
+            color: plum;
+        }
+        mark{
+            background-color: plum;
+            
+        }
+        a{
+            color: plum;
+        }
+    </style>
+    <body>
+        <h2>Tópicos de Pesquisa</h2>
+        <div class="topicos">
+            <ul type="disc" >
+                <li>Computaçao na nuvem</li>
+                <li>Infraestrutura de TI</li>
+                <li>SaaS</li>
+                <li>PaaS</li>
+                <li>IaaS</li>
+                <li>Virtualização</li>
+            </ul>
+        </div>
+        <form id="Chat">
+            <label for="Tp1">Insira o tópico de pesquisa:</label>
+            <input type="text" id="Tp1">
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <div>
+            <h3>Resposta</h3>
+            <p id="Resposta"></p>
+        </div>
+        <script>
+            const form = document.getElementById('Chat');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+
+                const Resposta = document.getElementById('Resposta');
+
+                let resp = document.getElementById('Tp1').value;
+
+                if(resp == "Computação na nuvem"){
+                    Resposta.innerHTML = '<h2>Informações completas</h2>' +
+                    'A computação em nuvem é o fornecimento de serviços de computação, <br>' + 
+                    'incluindo servidores, armazenamento, bancos de dados, sistema de rede, software, análise <br>' +
+                    'e inteligência, pela Internet (“a nuvem”) para oferecer inovações mais rápidas, recursos <br>' +
+                    'flexíveis e economias de escala. Você normalmente paga apenas pelos serviços de nuvem que <br>' +
+                    'usa, ajudando a reduzir os custos operacionais, a executar sua infraestrutura com mais <br>' +
+                    'eficiência e a dimensionar conforme as necessidades da sua empresa mudam.' +
+                    '<br>' +
+                    '<a href="https://azure.microsoft.com/pt-br/resources/cloud-computing-dictionary/what-is-cloud-computing">Fonte</a>' +
+                    
+                    '<h2>Empresas que fornecem</h2>' +
+
+                    '<h3>AWS (Amazon Web Services)</h3>' +
+
+                    '<h4>Tipo: Provedor de Cloud Computing</h4>' +
+
+                    'AWS é um dos maiores provedores de serviços em nuvem do mundo, oferecendo uma ampla <br>' +
+                    'gama de soluções, como computação, armazenamento, aprendizado de máquina e <br>' +
+                    'análise de dados. É conhecido pela sua escalabilidade, robustez e pela vasta <br>' +
+                    'rede global de data centers. Empresas de todos os tamanhos confiam na AWS por sua <br>' +
+                    'inovação constante e suporte à transformação digital.' +
+
+                    '<h3>Microsoft Azure</h3>' +
+
+                    '<h4>Tipo: Provedor de Cloud Computing</h4>' +
+
+                    'Microsoft Azure é uma plataforma versátil que integra soluções de cloud computing, <br>' + 
+                    'incluindo infraestrutura como serviço (IaaS), plataforma como serviço (PaaS) e <br>' +
+                    'software como serviço (SaaS). Além de oferecer suporte abrangente para produtos <br>' +
+                    'Microsoft, como o Office 365, o Azure também é conhecido por sua integração com <br>' +
+                    'ferramentas de IA e aprendizado de máquina.' + 
+
+                    '<h3>Google Cloud Platform (GCP)</h3>' +
+
+                    '<h4>Tipo: Provedor de Cloud Computing</h4>' +
+
+                    'O GCP é uma solução de cloud computing desenvolvida pelo Google. Ele é <br>' +
+                    'amplamente reconhecido por suas ferramentas avançadas de análise de dados <br>' +
+                    'e IA, como o BigQuery e o TensorFlow. Sua infraestrutura é altamente <br>' +
+                    'confiável e os usuários apreciam seu foco em soluções sustentáveis e <br>' +
+                    'de alta performance.' +
+                    '<br>' +
+                    '<a href="https://blog.dsacademy.com.br/principais-provedores-de-cloud-computing-e-plataformas-de-dados-do-mercado/">Fonte</a>' +
+
+                    '<h3>Empresas relacionadas </h3>' + 
+                    '<h4>1. Netflix </h4>' +
+                    'A Netflix, desde 2016, migrou 100% dos seus centros de dados para a nuvem. <br>' +
+                    'Tal ação trouxe inúmeros benefícios para a empresa, a começar pelo número <br>' +
+                    'de assinantes, que obteve grande aumento e continua crescendo significativamente. <br>' +
+                    'Assim, o serviço evoluiu de forma muito rápida. Sem o armazenamento na nuvem, <br>' +
+                    'suportar esse crescimento em datacenters próprios seria bastante dispendioso.<br>' +
+                    'Hoje, a Netflix funciona 100% em nuvem, e os usuários podem acessar de qualquer <br>' +
+                    'lugar, em qualquer horário.' +
+                    '<h4>2. Google</h4>' +
+                    'A Google é um dos grandes exemplos de empresa que utiliza a computação em <br>' +
+                    'nuvem para armazenar dados. <br>' +
+                    'Além de oferecer o serviço de nuvem, a Google Cloud Platform, a empresa <br>' +
+                    'possui ferramentas gratuitas para os usuários da sua conta, como o Google Drive. <br>' +
+                    'Dessa forma, a ferramenta permite o armazenamento e compartilhamento de <br>' +
+                    'fotos, vídeos, documentos pessoais, entre outros documentos.<br>' +
+                    '<h4>3. Spotify</h4>' +
+                    'Um dos serviços de streaming de músicas mais conhecidos atualmente, o Spotify, <br>' +
+                    'iniciou a sua migração para a nuvem também em 2016.<br>' +
+                    'Antes de utilizar a tecnologia nuvem, a empresa comprava ou licenciava serviços <br>' +
+                    'de datacenters espalhados pelo mundo, para armazenar e processar seus dados. <br>' +
+                    'Com o tempo, o crescimento do serviço e os custos ficaram muito altos, sendo <br>' +
+                    'muito mais vantajoso migrar para cloud computing. Em outras palavras, os <br>' +
+                    'provedores de nuvem são de alta qualidade e custos são significativamente mais baixos.' +
+                    '<h4>4. Adobe Creative Cloud</h4>' +
+                    
+                    'Até mesmo o conhecido Photoshop, e outros programas da Adobe, migraram para <br>' +
+                    'a computação em nuvem há alguns anos. <br>' +
+                    'O Creative Suite se transformou em Creative Cloud, ou seja, seus programas <br>' +
+                    'passaram a ser acessados na nuvem por meio de assinatura. <br>' +
+                    'Assim, os usuários ganham a facilidade para atualizar os seus produtos, <br>' +
+                    'gastando bem menos. ' +
+
+                    '<h4>5. Airbnb</h4>' +
+                    'A Airbnb é outra empresa que não tem setores de TI e equipamentos de <br>' +
+                    'infraestrutura in house. <br>' +
+                    'O site, que reúne anfitriões e viajantes, é uma das empresas que já <br>' +
+                    '“nasceu na nuvem”, conhecidas como “born on the cloud”.' +
+                    '<h4>6. Uber</h4>' +
+                    'A Uber, inovação nos serviços de transporte presente em vários países, <br>' +
+                    'também dispensa grandes acervos de dados e funciona com seus serviços na nuvem.' +
+                    '<h4>7. Amazon</h4>' +
+                    'A empresa atua fortemente no mercado digital e contabiliza crescimentos <br>' + 
+                    'expressivos a cada ano.<br>' +
+                    'Por sua relevância, é tida como referência no uso de cloud computing <br>' +
+                    'e em vendas online. ' +
+                    '<br>' +
+                    '<a href="https://emaster.cloud/empresas/empresas-que-usam-cloud-computing/">Fonte</a>' +
+
+                    '<h2>Exemplos práticos</h2>' +
+                    '<h3>Google</h3>' +
+                    'O Google utiliza a computação em nuvem para armazenar seus dados, <br>' +
+                    'quando você busca por algo na internet, carrega uma imagem e tudo <br>' +
+                    'mais, saiba que esses dados foram carregados através da nuvem.<br>' +
+                    'Além disso, o Google tem seu próprio serviço de computação na nuvem, <br>' +
+                    'como o Google Drive, que talvez você já tenha até utilizado em outras <br>' +
+                    'oportunidades, nesse caso esse serviço é gratuito, porém com muitas limitações.' +
+
+                    '<h3>Spotify</h3>' +
+                    'Devido à alta demanda de usuários, o Spotify foi outro que migrou seus dados <br>' +
+                    'para a nuvem em 2016. Com isso a empresa economizou um bom dinheiro, visto <br>' +
+                    'que um dos principais motivos da migração, teria sido os altos custos que a <br>' +
+                    'empresa estava tendo com a armazenagem de seus dados em data center <br>' +
+                    'espalhados pelo mundo.' +
+
+
+                    '<h3>Netflix</h3>' +
+                    'Também em 2016, a Netflix  migrou 100% dos seus dados para a nuvem, esse <br>' +
+                    'processo durou cerca de sete anos, porém trouxe benefícios excelentes <br>' +
+                    'para que você possa ter visualização rápida dos conteúdos disponíveis <br>' +
+                    'pelo aplicativo, como a empresa cresceu muito, e rápido, esse já foi um <br>' +
+                    'processo de antecipação para poder manter a qualidade dos seus serviços.' +
+
+                    '<h3>Uber</h3>' +
+                    'A Uber, podemos dizer que veio na mesma linha da Netflix, como teve um <br>' +
+                    'crescimento muito grande em pouco empo, a demanda cresceu muito e a <br>' +
+                    'estratégia da empresa foi migrar os dados para a nuvem para conseguir <br>' +
+                    'atender todo esse público da melhor forma possível.' +
+
+                    '<h3>Airbnb</h3>' +
+                    'Esse um exemplo de computação em nuvem que já surgiu com os dados <br>' +
+                    'migrados no cloud compunting. A Airbnb nunca teve seus dados armazenados <br>' +
+                    'por conta própria, esse tipo de empresa que já nasce no meio da nuvem é <br>' +
+                    'chamada de born on the cloud.' +
+                    '<br>' +
+                    '<a href="https://www.brascloud.com.br/pt-br/blog/5-exemplos-de-computacao-em-nuvem">Fonte</a>' +
+
+                    '<h2>Imagens do funcionamento</h2>' +
+                    '<img src="https://www.teleco.com.br/imagens/tutoriais/tutorialcloudcaracten_figura01.jpg" alt="A imagem não carregou">' +
+
+                    '<h2>Vantagens</h2>' +
+                    ' A computação em nuvem é uma grande mudança no pensamento das empresas sobre <br>' +
+                    'recurso de TI. Aqui estão seis motivos comuns pelos quais empresas estão <br>' +
+                    'adotando esse serviço: <br>' +
+                    '° Custo<br>' +
+                    '° Velocidade<br>' +
+                    '° Escala global<br>' +
+                    '° Produtividade<br>' +
+                    '° Desempenho<br>' +
+                    '° Confiabilidade <br>' +
+                    '° Segurança <br>' +
+
+                    '<h2>Desvantagens</h2>' +
+                    'Uma das desvantagens mais comuns da computação em nuvem é que ela depende de <br>' +
+                    'conexão com a internet. A tradicional usa uma conexão com fio para acessar <br>' +
+                    'dados em servidores ou dispositivos de armazenamento. Com a computação em <br>' +
+                    'nuvem, uma conexão ruim poderá impedir que você acesse as informações ou <br>' +
+                    'aplicativos necessários. <br>' +
+                    'Até mesmo os principais provedores podem passar por tempos de instabilidade <br>' +
+                    'devido a desastes naturais ou problemas técnicos inesperados. <br>' +
+                    'outras desvantagens: <br>' +
+                    '° risco de dependência do fornecedor;<br>' +
+                    '° menos controle sobre a infraestrutura em nuvem subjacente;<br>' +
+                    '° preocupações sobre riscos de segurança, como privacidade de dados e ameaças on-line;<br>' +
+                    '° complexidade de integração com os sistemas existentes; <br>' +
+                    '° custos imprevistos e despesas inesperadas. <br>' +
+                    '<br>' +
+                    '<a href="https://cloud.google.com/learn/advantages-of-cloud-computing?hl=pt-BR">Fonte</a>' +
+
+                    '<h2>Tipos de computação em nuvem</h2>' +
+                    ' Nem todas são iguais, e também não tem um tipo "ideal" de computação <br>' +
+                    'em nuvem. Existem vários tipos, meodelos e serviços que evoluíram para <br>' +
+                    'ajudar a oferecer a coisa certa para cada ocasião. Primeiro determinamos <br>' +
+                    'o tipo de iimplantação ou arquitetura, no qual os serviços seram <br>' +
+                    'implementados. Aqui estão as três maneiras de implanta-los:<br>' +
+                    '<br>' +
+                    '<mark>° NUVEM PÚBLICA:</mark> As nuvens públicas pertencem a provedores de serviços <br>' +
+                    'de nuvem terceirizados e são administradas por eles . Eles também <br>' +
+                    'fornecem recursos de computação pela Internet, como servidores e <br>' +
+                    'armazenamento. O Microsoft Azure é um exemplo de nuvem pública. <br>' +
+                    'Com uma nuvem pública, todo o hardware, software e outras infraestruturas <br>' +
+                    'de suporte são de propriedade e gerenciadas pelo provedor de nuvem. Você <br>' +
+                    'acessa esses serviços e gerencia sua conta usando um navegador da Web.<br>' +
+                    '<br>' +
+                    '<mark>° NUVEM PRIVADA:</mark> Uma nuvem privada se refere aos recursos de computação <br>' +
+                    'em nuvem usados exclusivamente por uma única empresa ou organização. Uma <br>' +
+                    'nuvem privada pode estar localizada fisicamente no data center local da <br>' +
+                    'empresa. Algumas empresas também pagam provedores de serviços terceirizados <br>' +
+                    'para hospedar sua nuvem privada. Uma nuvem privada é aquela em que os serviços <br>' +
+                    'e a infraestrutura são mantidos em uma rede privada.<br>' +
+                    '<br>' +
+                    '<mark>° NUVEM HÍBRIDA:</mark> Nuvens híbridas combinam nuvens públicas e privadas ligadas <br>' +
+                    'por uma tecnologia que permite que dados e aplicativos sejam compartilhados <br>' +
+                    'entre elas. Permitindo que os dados e os aplicativos se movam entre nuvens <br>' +
+                    'privadas e públicas, uma nuvem híbrida oferece à sua empresa maior flexibilidade, <br>' +
+                    'mais opções de implantação e ajuda a otimizar sua infraestrutura, segurança e <br>' +
+                    'conformidade existentes.<br>' +
+                    '<br>' +
+                    '<a href="https://azure.microsoft.com/pt-br/resources/cloud-computing-dictionary/what-is-cloud-computing">Fonte</a>';
+   
+                }else{
+                    if(resp == "Infraestrutura de TI"){
+                        Resposta.innerHTML = '<h2>Informações completas</h2>' +
+                        'Infraestrutura de tecnologia da informação (TI) refere-se aos componentes <br>' +
+                        'necessários para operar e gerenciar ambientes corporativos de TI. A <br>' +
+                        'infraestrutura de TI pode ser implantada em um sistema de cloud computing <br>' +
+                        'ou nas próprias instalações da organização.<br>' +
+                        'Esses componentes incluem hardware, software, rede, sistema operacional <br>' +
+                        'e armazenamento de dados. Todos eles são usados para fornecer serviços e <br>' +
+                        'soluções de TI. As soluções de infraestrutura de TI estão disponíveis como <br>' +
+                        'aplicações de software para download. Elas são executadas nos recursos de <br>' +
+                        'TI existentes, como armazenamento definido por software, ou como soluções <br>' +
+                        'online oferecidas por provedores de serviços, na forma de infraestrutura <br>' +
+                        'como serviço (IaaS). <br>' +
+                        '<a href="https://www.redhat.com/pt-br/topics/cloud-computing/what-is-it-infrastructure">Fonte</a>' +
+                        '<h2>Empresas que fornecem</h2>' +
+                        'Empresas como Kyndryl, Amazon Web Services (AWS), BHS, green4T, Opensys,<br>' + 
+                        'Novais IT e Infratec Tecnologia oferecem infraestrutura de TI, fornecendo <br>' +
+                        'soluções de cloud computing, gestão de ambientes on-premises e híbridos, <br>' +
+                        'serviços gerenciados, consultoria e projetos de segurança para empresas. <br>' +
+                        '<h4>referência: IA (visão geral do google)</h4>' +
+                        
+                        '<h2>Empresas relacionadas</h2>' +
+                        'Empresas de infraestrutura de TI oferecem soluções como nuvem <br>' +
+                        '(AWS, Microsoft Azure), hardware (Dell), software (VMware, Microsoft), <br>' +
+                        'redes (3CORP), virtualização e gerenciamento de dados, incluindo <br>' +
+                        'serviços como migração, implantação e suporte técnico especializado <br>' +
+                        'para o ambiente de datacenter. Exemplos incluem a Kyndryl, Infratec <br>' +
+                        'Tecnologia, e a brasileira CompleTI. <br>' +
+                        '<h4>referência: IA (visão geral do google)</h4>' +
+                        
+                        '<h2>Exemplos práticos</h2>' +
+                        '<h4>- Software:</h4> São programas e sistemas que fazem tudo funcionar no <br>' +
+                        'computador. Eles ajudam a organizar, automatizar tarefas e guardar <br>' +
+                        'informações importantes para as decisões da empresa. (Exs.: Sistemas <br>' +
+                        'operacionais, aplicativos, etc.); <br>' +
+                        '<h4>-	Hardware:</h4> São as peças físicas os equipamentos, mesmo como <br>' +
+                        'computadores, servidores e impressoras. ter um hardware de boa qualidade <br>' +
+                        'é crucial, e pode ser alugado ou contratado como serviço HaaS, o hardware <br>' +
+                        'oferecido como serviço, eliminando a necessidade de investimentos em <br>' +
+                        'equipamentos , não só reduzindo o gasto, mas também, garantindo acesso <br>' +
+                        'a tecnologias atualizadas . (Exs.: Dispositivos físicos, computadores, <br>' +
+                        'roteadores etc.); <br>' +
+                        '<h4>-	Redes:</h4>  É o que conecta tudo, tipo a internet interna ou externa <br>' +
+                        'da empresa, com roteadores e switches, as informações circulam e a <br>' +
+                        'colaboração acontece. Segurança é super importante aqui pra manter <br>' +
+                        'tudo protegido. (Exs.: redes locais (LANs), redes de longa distância <br>' +
+                        '(WANs), roteadores e switches.); <br>' +
+                        '<h4>-	Banco de Dados:</h4> É onde a empresa guarda todas as suas informações <br>' +
+                        'de forma organizada. Um bom sistema de gerenciamento de dados garante <br>' +
+                        'que tudo esteja seguro e acessível para tomar as melhores decisões; <br>' +
+                        '<h4>-	Serviços:</h4> Os serviços de TI envolvem atividades essenciais para manter a <br>' +
+                        'infraestrutura tecnológica de uma empresa, como configuração e gerenciamento <br>' +
+                        'de redes e servidores, suporte a hardware e software, monitoramento de sistemas, <br>' +
+                        'segurança da informação, backup de dados, e desenvolvimento de aplicações. <br>' +
+                        '(Exs.: gestão de servidores, monitoramento de sistemas, segurança de dados e redes, <br>' +
+                        'suporte técnico a hardware e software; etc; ). ' +
+
+                        '<h2>Imagem do funcionamento</h2>' +
+                        '<img src="imagens/IC-IT-infrastructure-lifecycle_PT.png" alt="A imagem não carregou">' +
+
+                        '<h2>Vantagens</h2>' +
+                        ' ° Um dos principais benefícios é o aumento da produtividade, isso porque <br>' +
+                        'o setor agiliza o acesso a novas tecnologias que agilizam a rotina.<br>' +
+                        '° Outro benefício é o aumento de segurança, i=onde a infraestrutura de <br>' +
+                        'TI implementa medidas robustas de proteção de dados, como firewalls, <br>' +
+                        'autenticação em dois fatores e criptografia.<br>' +
+                        '° Também reduz custos ja que a longo prazo os custos inicias geram um <br>' +
+                        'bom retorno, ja que reduzem gastos da empresa com erros, roubo de informações <br>' +
+                        'e tarefas duplicadas.<br>' +
+                        '° Melhora a experiência dos colaborados e clientes, pois otimiza os serviços <br>' +
+                        'e oferece um suporte rápido e eficiente.<br>' +
+                        '<a href="https://safetec.com.br/cloud-computing/infraestrutura-de-ti/">Fonte</a>' +
+
+                        '<h2>Desvantagens</h2>' +
+                        'Os quatro desafios mais comuns enfrentados são:<br>' +
+                        '<h4>° Escalabilidade e flexibilidade:</h4> À medida que as empresas crescem, <br>' +
+                        'sua infraestrutura de TI deve evoluir para acomodar demandas crescentes. <br>' +
+                        'No entanto, muitas organizações sofrem para dimensionar seus sistemas de <br>' +
+                        'forma eficiente, muitas vezes levando a erros de desempenho e tempo de inatividade.<br>' +
+
+                        '<h4>° Segurança de dados e conformidade:</h4> A segurança dos dados é uma das principais <br>' +
+                        'prioridades no cenário digital dos dias atuais, com o aumento das ameaças <br>' +
+                        'cibernéticas, como ransomware e violações de dados, visando vulnerabilidades <br>' +
+                        'organizacionais. Muitas empresas também enfrentam desafios de hardware, <br>' +
+                        'pois os componentes críticos dos sistemas podem ficar indisponíveis ou difíceis <br>' +
+                        'de substituir, possivelmente interrompendo as operações e expondo-as a um risco maior.<br>' +
+
+                        '<h4>° Gestão de custos:</h4> A manutenção da infraestrutura de TI pode ser cara, <br>' +
+                        'especialmente quando custos inesperados surgem de falhas no sistema, atualizações <br>' +
+                        'ou esforços de dimensionamento. Sem uma estratégia clara, esses custos podem sair <br>' +
+                        'de controle, afetando os resultados financeiros de uma empresa.<br>' +
+
+                        '<h4>° Tempo de inatividade e recuperação de desastres:</h4> As interrupções dos sistemas <br>' +
+                        'e a perda de dados podem ter efeitos devastadores nas operações das empresas, <br>' +
+                        'levando a perdas financeiras e danos à reputação. Garantir que a infraestrutura <br>' +
+                        'de TI seja resiliente o suficiente para suportar interrupções inesperadas é um <br>' +
+                        'desafio significativo para muitas organizações.<br>' +
+                        '<a href="https://evernex.com/pt-br/blog-pt/os-4-desafios-mais-comuns-da-infraestrutura-de-ti-e-como-supera-los/">Fonte</a>' +
+                        
+                        '<h2>Tipos de infraestrutura de TI</h2>' +
+                        '<h4>Temos três tipo de infraestrutura de TI</h4>' +
+ 
+                        '<mark>° INFRAESTRUTURA TRADICIONAL:</mark> é aquela que conta com serviços de <br>' +
+                        'hardware e software comuns como instalação, data center, servidor, computador <br>' +
+                        'desktop, e softwares de aplicativos corporativos nas dependências da empresa. <br>' +
+                        'Requer mais energia e espaço fisíco maior e capital mais elevado para adquir <br>' +
+                        'todo o equipamento, geralmente é instalada em um lugar de uso exclusivo da empresa.<br>' +
+
+                        '<mark>° INFRAESTRUTURA EM CLOUD:</mark> é aquela que os usuário pode acessar <br>' +
+                        'por meio da internet, sem ter que adquirir toda a tecnologia física. Ou seja, <br>' +
+                        'basta apenas uma conexão de rede para usá-la, já que tudo é feito por meio da <br>' +
+                        'virtualização, o que implica conectar servidores físicos mantidos por um provedor <br>' +
+                        'de serviços terceirizado em uma ou mais regiões. <br>' +
+                        'Em seguida, os recursos se dividem e distribuem para se tornarem acessíveis aos usuários.<br>' +
+                        'Esses, podem acessar tudo de qualquer lugar somente com uma conexão com a internet. <br>' +
+                        'No geral, a infraestrutura em cloud é pública, por isso também é conhecida como cloud <br>' +
+                        'pública. Um bom exemplo é o Google Cloud, que oferece serviços como OpenShift e APP Shield.<br>' +
+
+                        '<mark>° INFRAESTRUTURA HÍBRIDA:</mark> A terceira alternativa de serviços de <br>' +
+                        'infraestrutura de TI é a híbrida. Na prática, esse tipo mistura elementos dos <br>' +
+                        'dois tipos anteriores para ter mais eficiência operacional. Ou seja, a empresa <br>' +
+                        'conta com uma estrutura física e local e serviços em nuvem para preencher lacunas.' ;
+
+                    }else{
+                        if(resp == "SaaS"){
+                            Resposta.innerHTML = '<h2>Informações completas</h2>' +
+                            
+                            'O software como serviço (SaaS) é tradicionalmente um modelo de software <br>' +
+                            'baseado em nuvem, que entrega aplicações aos usuários finais por meio <br>' +
+                            'de um navegador da Internet. Os fornecedores de SaaS hospedam serviços <br>' +
+                            'e aplicações para que os clientes acessem sob demanda. Com uma oferta de <br>' +
+                            'SaaS, não é necessário pensar sobre como o serviço é mantido ou como a <br>' +
+                            'infraestrutura subjacente é gerenciada. Basta pensar em como usará o <br>' +
+                            'software. Outro aspecto típico de um modelo SaaS é o preço pago em uma <br>' +
+                            'assinatura ou no modelo de pagamento conforme o uso, em vez de comprar <br>' +
+                            'todas as funcionalidades de uma só vez em um grande bloco. Um exemplo <br>' +
+                            'comum de aplicação SaaS é a aplicação de e-mail de terceiros baseada na <br>' +
+                            'Web, na qual você pode enviar e receber e-mails sem precisar gerenciar <br>' +
+                            'recursos adicionais para o produto de e-mail ou manter os servidores e <br>' +
+                            'sistemas operacionais em que o programa de e-mail está sendo executado.' +
+                            '<br>' +
+                            '<a href="https://aws.amazon.com/pt/what-is/saas/">Fonte</a>' + 
+
+                            '<h2>Empresas que fornecem</h2>' +
+
+                            'Várias empresas entraram (e estão entrando) nesse espaço tentando <br>' +
+                            'capitalizar essa oportunidade.<br>' +
+                            'Na verdade, existem aproximadamente 30.000 empresas de SaaS no mundo <br>' +
+                            'todo, com cerca de 17.000 delas sediadas nos Estados Unidos .<br>' +
+                            '<br>' +
+                            '-> Adobe;<br>' +
+                            '-> Microsoft;<br>' +
+                            '-> Forças de vendas;<br>' +
+                            '-> Shopify;<br>' +
+                            '-> Linktree.<br>' +
+                            '<br>' +
+                            '<a href="https://explodingtopics.com/blog/top-saas-companies">Fonte</a>' + 
+
+                            '<h2>Exemplos práticos</h2>' +
+
+                            '<h4>-> Slack:</h4> é um aplicativo de mensagens usado com mais frequência para <br>' +
+                            'conectar membros de equipe no local de trabalho;<br>' +
+                            '<h4>-> Docusign:</h4> a docusign levou as assinaturas para a nuvem, oferecendo <br>' +
+                            'uma plataforma para assinaturas eletrônicas que podem ser usadas para <br>' +
+                            'tudo, desde correspondência pessoal até documentos legais;<br>' +
+                            '<h4>-> Monday.com:</h4> um software de gerenciamento de projetos visualmente <br>' +
+                            'interessante, o monday.com atua como um assinante para otimizar seus <br>' +
+                            'fluxos de trabalho;<br>' +
+                            '<4h>-> Salesforce:</h4> é uma das empresa d SaaS mais populares do mercado, é uma <br>' +
+                            'plataforma de CRM projetada para promover conversões e oferecer a cada <br>' +
+                            'departamento uma visão holística das necessidades de cada cliente;<br>' +
+                            '<h4-> Asana:</h4> é outra ferramenta de gerenciamento de projetos que facilita <br>' +
+                            'para equipes gerenciar fluxos de trabalho unificados em períodos de tempo <br>' +
+                            'específicos. ' +
+                            '<br>' +
+                            '<a href="https://www.saasacademy.com/blog/saas-examples">Fonte</a>' + 
+
+                            '<h2> Imagens do funcionamento </h2>' +
+                            '<img src="imagens/images.png" alt="A imagem não carregou">' +
+
+                            '<h2>Vantagens</h2>' +
+                            ' Algumas vantagens do uso de SaaS: <br>' +
+                            '<h4>° acesso de qualquer lugar, em qualquer dispositivo.</h4> Há muita flexibilidade: as <br>' +
+                            'empresas podem permitir que os funcionários trabalhem de qualquer lugar do <br>' +
+                            'mundo, e os usuários podem acessar seus arquivos, independentemente de onde <br>' +
+                            'estiverem. Além disso, a maioria dos usuários usa vários dispositivos e é <br>' +
+                            'muito comum substituir esses dispositivos por novos. Nesse caso, os usuários <br>' +
+                            'não precisam reinstalar aplicações SaaS ou adquirir novas licenças toda vez <br>' +
+                            'que trocarem de dispositivo.<br>' +
+                            '<h4>° não requer atualizações ou instalações.</h4> O provedor de SaaS atualiza e corrige <br>' +
+                            'a aplicação continuamente.<br>' +
+                            '<h4>° escalabilidade.</h4> O provedor SaaS lida com a ampliação da aplicação, como <br>' +
+                            'adicionar mais espaço ao banco de dados ou aumentar a capacidade de computação <br>' +
+                            'conforme a demanda.<br>' +
+                            '<h4>°  redução de custos.</h4> O SaaS reduz os custos internos e as despesas gerais da TI. <br>' +
+                            'O provedor de SaaS mantém os servidores e a infraestrutura que sustentam a <br>' +
+                            'aplicação, e a empresa só tem que arcar com o valor da assinatura da aplicação.<br>' +
+                            '<br>' +
+                            '<a href="https://www.cloudflare.com/pt-br/learning/cloud/what-is-saas/">Fonte</a>' + 
+
+                            '<h2>Desvantagens</h2>' +
+                            ' Algumas desvantagens do uso de SaaS: <br>' +
+                            '<h4>° aprisionamento tecnológico.</h4> Uma empresa pode se tornar excessivamente <br>' +
+                            'dependente do provedor de aplicativos SaaS. É demorado e custa caro migrar <br>' +
+                            'para um novo aplicativo se todo o banco de dados de uma organização estiver <br>' +
+                            'armazenado no aplicativo antigo.<br>' +
+                            '<h4>°  segurança e conformidade.</h4> Em aplicações SaaS, a responsabilidade pela <br>' +
+                            'segurança passa da equipe interna para o provedor. Para pequenas e médias <br>' +
+                            'empresas, isso pode ser vantajoso, pois grandes provedores oferecem segurança <br>' +
+                            'robusta. Porém, grandes empresas com normas rígidas enfrentam desafios, pois <br>' +
+                            'nem sempre conseguem avaliar a segurança por conta própria e precisam confiar <br>' +
+                            'na garantia do provedor.<br>' +
+                            '<h4>°  exige um controle de acesso mais forte.</h4> A maior acessibilidade aos aplicativos <br>' +
+                            'SaaS também significa que a verificação da identidade do usuário e o controle dos <br>' +
+                            'níveis de acesso se tornam muito importantes. Com o SaaS, os ativos organizacionais <br>' +
+                            'não são mais mantidos dentro de uma rede interna, separada do mundo exterior. <br>' +
+                            'Em vez disso, o acesso do usuário é baseado na identidade do usuário: se alguém <br>' +
+                            'tiver as credenciais de login corretas, o acesso será concedido. Por isso, é <br>' +
+                            'essencial uma verificação de identidade forte.' +
+                            '<br>' +
+                            '<a href="https://www.cloudflare.com/pt-br/learning/cloud/what-is-saas/">Fonte</a>' + 
+
+                            '<h2>Tipos de SaaS</h2>' +
+                            'Os tipos de SaaS mais comuns são organizados por sua funcionalidade ou <br>' +
+                            'o setor que servem, incluindo: CRM (gestão de relacionamento com o cliente), <br>' +
+                            'ERP (gestão empresarial integrada), Marketing e Vendas, Colaboração, <br>' +
+                            'Contabilidade, RH (recursos humanos), e Atendimento ao Cliente. Outra <br>' +
+                            'classificação divide o SaaS em horizontal (para uma função ampla, como e-mail) <br>' +
+                            'e vertical (específico para um setor, como softwares de streaming ou e-commerce). <br>' +
+                            '<h4>fonte: IA (visão geral do google)</h4>' ;
+
+                        }else{
+                            if(resp == "PaaS"){
+                                Resposta.innerHTML = '<h2>Informações completas</h2>'+
+                                'Plataforma como serviço (PaaS) é uma forma de cloud computing onde a <br>' +
+                                'plataforma de software de aplicações é fornecida por terceiros. <br>' +
+                                'Direcionada principalmente para desenvolvedores e programadores, a <br>' +
+                                'solução de PaaS permite ao usuário desenvolver, executar e gerenciar <br>' +
+                                'aplicações sem ter o trabalho de criar e manter a infraestrutura ou <br>' +
+                                'plataforma que está normalmente associada a esses processos.<br>' +
+                                'As plataformas PaaS podem funcionar na nuvem ou na infraestrutura on-premise. <br>' +
+                                'Em ofertas gerenciadas, um provedor de PaaS hospeda os componentes de hardware <br>' +
+                                'e software na sua infraestrutura, fornecendo essa plataforma ao usuário como <br>' +
+                                'uma solução integrada, um stack de soluções ou um serviço por meio de uma conexão <br>' +
+                                'com a Internet.<br>' +
+                                'Para casos de uso de desenvolvimento nativo em nuvem, uma PaaS baseada em <br>' +
+                                'Kubernetes pode funcionar como a plataforma na qual as aplicações baseadas em <br>' +
+                                'container podem ser executadas, escaladas e gerenciadas. Por exemplo, as <br>' +
+                                'modalidades de serviços em nuvem do Red Hat®️ OpenShift®️  são ofertas <br>' +
+                                'gerenciadas de PaaS.' +
+                                '<br>' +
+                                '<br>' +
+                                '<a href="https://www.redhat.com/pt-br/topics/cloud-computing/what-is-paas">Fonte</a>' +
+
+                                '<h2> Empresas que fornecem </h2> ' +
+                                'PaaS é uma opção econômica que acelera o desenvolvimento de software e <br>' +
+                                'oferece acesso a recursos atualizados a um preço acessível.  <br>' +
+                                '<br>' +
+                                '<ul type="disc">' +
+                                    '<li> Amazon Web Services (AWS Elastic Beanstalk) </li>' +
+                                    '<li> Heroku </li>' +
+                                    '<li> Microsoft Azure </li>' +
+                                    '<li> Google App Engine </li>' +
+                                    '<li> Salesforce Lightning </li>' +
+                                '</ul>' +
+                                '<br>' +
+                                '<br>' +
+                                '<a href="https://www.saasceo.com/examples-of-paas/">Fonte</a>' +
+
+                                '<h2>Exemplos práticos</h2>' +
+                                '<h4>Micrsoft Azure:</h4> O exemplo de PaaS da Microsoft oferece aos <br>' +
+                                'clientes plano gratuito de 12 meses, com possibilidade de upgrade, <br>' +
+                                'quando e se o cliente decidir;<br>' +
+                                '<h4>SalesForce:</h4> é uma combinação entre a Lightning Platform e o <br>' +
+                                'Heroku Enterprise, e como era de se esperar, ela atua de forma predominante <br>' +
+                                'em soluções que aprofundam e facilitam o relacionamento entre a empresa que <br>' +
+                                'utiliza esse exemplo de PaaS e seus clientes; <br>' +
+                                '<h4>Google App Engine:</h4> Este exemplo de PaaS foi criado pelo Google <br>' +
+                                'para solucionar e minimizar burocracias internas. Ou seja, a ideia era <br>' +
+                                'que ele fosse utilizado internamente para criação e testes, sem a <br>' +
+                                'necessidade de que cada projeto passasse pelo setor de infraestrutura. <br>' +
+                                '<br>' +
+                                '<a href="https://conteudo.movidesk.com/exemplo-paas-plataform-as-a-service/">Fonte</a>' +
+
+                                '<h2>Imagens do funcionamento</h2>' +
+                                '<img src="imagens/image-hierarquia-iaas-paas-saas.png" alt="A imagem não carregou">' +
+
+                                '<h2>Vantagens</h2>' +
+                                'Um dos principais benefícios do PaaS é a redução de custos. As organizações <br>' +
+                                'que usam técnicas de PaaS relataram economia operacional de até 50% em <br>' +
+                                'comparação com o fato de que equipes de projeto individuais gerenciam suas <br>' +
+                                'próprias pilhas de tecnologia em silos. A economia de custos mais comum vem <br>' +
+                                'de recursos padronizados e consolidados, como servidores, bem como da eliminação <br>' +
+                                'do trabalho redundante entre as equipes.<br>' +
+                                'Outro benefício importante do PaaS é a agilidade. Os clientes de PaaS podem <br>' +
+                                'implementar ambientes com mais rapidez para desenvolvimento, teste e produção. <br>' +
+                                'Em alguns casos, o provisionamento, a configuração e a integração de uma <br>' +
+                                'plataforma podem assumir a maioria da programação de produção de uma aplicação. <br>' +
+                                'O PaaS permite que as aplicações cheguem às mãos de testadores e usuários finais <br>' +
+                                'quase tão rápido quanto podem ser desenvolvidos. Além disso, quando as cargas <br>' +
+                                'de trabalho da aplicação flutuam, o PaaS é dimensionado para atender melhor ao <br>' +
+                                'suprimento com a demanda.<br>' +
+                                '<br>' +
+                                '<a href="https://www.oracle.com/br/cloud/what-is-paas/benefits-of-paas/">Fonte</a>' +
+
+                                '<h2>Desvantagens</h2>' +
+                                '<mark> ° Menos flexibilidade/controle:</mark> Depende da capacidade dos data centers <br>' +
+                                'ou provedores. Para alcançar a integração completa, pode ser necessário <br>' +
+                                'alternar entre diferentes aplicativos e programas caso alguns componentes <br>' +
+                                'não possam ser habilitados corretamente para a nuvem. Ou talvez seja necessário <br>' +
+                                'manter alguns desses recursos no local e longe da nuvem.<br>' +
+                                '<mark>° Mais caro:</mark> Como cada ferramenta tem uma taxa de serviço, o uso de ferramentas <br>' +
+                                'PaaS de provedores de nuvem frequentemente aumenta o custo de execução de <br>' +
+                                'aplicativos na nuvem. Além disso, as taxas são frequentemente baseadas no <br>' +
+                                'consumo, o que implica que o preço de um aplicativo em nuvem pode aumentar <br>' +
+                                'simplesmente como resultado do uso frequente de determinadas ferramentas PaaS. <br>' +
+                                '<mark° Bloqueio de fornecedor:</mark> O fato de o provedor concluir parte do trabalho sem <br>' +
+                                'o seu envolvimento é um grande benefício. Por outro lado, a funcionalidade, a <br>' +
+                                'capacidade de resposta e a confiabilidade do provedor ainda influenciarão sua <br>' +
+                                'organização. Por isso, é crucial confiar no seu parceiro de negócios e estar <br>' +
+                                'preparado para qualquer imprevisto que possa surgir, mesmo com o fornecedor <br>' +
+                                'mais confiável. Para sua tranquilidade, você deve, no mínimo, fazer um backup <br>' +
+                                'dos seus dados.<br>' +
+                                '<mark>° Risco de segurança:</mark> O banco de dados em nuvem do provedor armazena todos <br>' +
+                                'os dados do aplicativo. Como o provedor pode ver informações privadas e <br>' +
+                                'sensíveis, isso levanta preocupações quanto à confidencialidade.<br>' +
+                                '<mark>° Problemas de integração:</mark> Cada provedor de PaaS possui um método de <br>' +
+                                'integração exclusivo, semelhante à compatibilidade. Não é possível mesclar <br>' +
+                                'dois produtos PaaS. As contradições são visíveis se forem tentadas. Além disso, <br>' +
+                                'trocar de provedor de PaaS raramente é uma operação simples quando surgem <br>' +
+                                'problemas de integração. <br>' +
+                                '<br>' +
+
+                                '<a href="https://blog.back4app.com/advantages-and-disadvantages-of-paas/#Top_5_Disadvantages_of_PaaS_Platforms">Fonte</a>' +
+
+                                '<h2>Tipos de PaaS</h2>' +
+                                '<h4>PaaS pública</h4>' +
+                                'É aqui que uma organização assina o mesmo serviço PaaS que outras <br>' +
+                                'empresas usam. Embora haja contas separadas, todos usam os mesmos <br>' +
+                                'recursos de nuvem armazenados nos mesmos servidores. Uma PaaS pública <br>' +
+                                'oferece capacidade de computação infinita.<br>' +
+
+                                '<h4>PaaS privado</h4>' +
+                                'Em uma PaaS privada, uma organização usa um segmento particionado <br>' +
+                                'e isolado da nuvem, em vez dos recursos públicos disponíveis para <br>' +
+                                'todos os outros. Assim como ocorre com uma nuvem privada, uma empresa <br>' +
+                                'usa seus próprios servidores e infraestrutura para maior segurança.<br>' +
+
+                                '<h4>PaaS híbrida</h4>' +
+                                'Como seu nome implica, as organizações podem usar uma combinação <br>' +
+                                'de PaaS pública e privada. A organização pode decidir quais recursos <br>' +
+                                'podem ser acessados por meio da PaaS pública e quais devem ser armazenados <br>' +
+                                'e protegidos na PaaS privada.<br>' +
+
+                                '<h4>Comunicações PaaS</h4>' +
+                                'Uma PaaS de comunicações permite que os desenvolvedores adicionem voz, <br>' +
+                                'vídeo e mensagens aos seus aplicativos sem ter que construir uma <br>' +
+                                'infraestrutura de comunicação em tempo real. Uma PaaS de comunicação <br>' +
+                                'inclui bibliotecas de código de amostra, aplicativos pré-criados e interfaces <br>' +
+                                'de programação de aplicativos (APIs) para ajudar os desenvolvedores a incorporar <br>' +
+                                'elementos de comunicação em seus aplicativos.<br>' +
+
+                                '<h4>PaaS móvel</h4>' +
+                                'Uma PaaS móvel oferece aos desenvolvedores um conjunto de serviços <br>' +
+                                'adicionais para ajudá-los a criar aplicativos móveis. Isso pode incluir <br>' +
+                                'kits de desenvolvimento de software (SDKs) para os principais sistemas <br>' +
+                                'operacionais móveis, incluindo iOS e Android.<br>' +
+
+                                '<h4>PaaS aberta</h4>' +
+                                'A PaaS aberta é um projeto de código aberto com padrões abertos <br>' +
+                                'criados usando software gratuito popular. É também uma plataforma <br>' +
+                                'social e de colaboração.	<br>' +
+                                '<br>' +
+                                '<a href="https://www.fortinet.com/br/resources/cyberglossary/platform-as-a-service">Fonte</a>';
+                            }else{
+                                if(resp = "IaaS"){
+                                    Resposta.innerHTML = '<h2>Informações completas</h2>' +
+                                    'A Infraestrutura como Serviço (IaaS) é um modelo de negócios que fornece <br>' +
+                                    'infraestrutura de TI, como recursos de computação, armazenamento e rede, <br>' +
+                                    'com pagamento conforme o uso pela Internet. Você pode usar o IaaS para <br>' +
+                                    'solicitar e configurar os recursos necessários para executar suas aplicações <br>' +
+                                    'e sistemas de TI. Você é responsável por implantar, manter e dar suporte <br>' +
+                                    'às suas aplicações, e o provedor de IaaS é responsável por manter a <br>' +
+                                    'infraestrutura física. A infraestrutura como serviço oferece flexibilidade <br>' +
+                                    'e controle sobre seus recursos de TI de maneira econômica.<br>' +
+                                    'Embora o setor tradicionalmente tenha usado termos como infraestrutura como <br>' +
+                                    'serviço, plataforma como serviço e software como serviço para agrupar serviços <br>' +
+                                    'em nuvem, na AWS, nos concentramos em soluções para suas necessidades, <br>' +
+                                    'que podem abranger vários tipos de serviços. Esta página usa o agrupamento <br>' +
+                                    'tradicional de serviços de IaaS, PaaS e SaaS para ajudá-lo a decidir qual <br>' +
+                                    'conjunto é adequado às suas necessidades e a estratégia de implantação que <br>' +
+                                    'funciona melhor para você.' +
+                                    '<br>' +
+                                    '<a href="https://aws.amazon.com/pt/what-is/iaas/">Fonte</a>' +
+
+                                    '<h2>Empresas que fornecem</h2>' +
+                                    '<ul type="disc">' +
+                                        '<li>AWS - Maior e mais usada plataforma;</li>' +
+                                        '<li>Google Cloud - Melhor para Big Data;</li>' +
+                                        '<li>Azure - Melhor para grandes empresas;</li>' +
+                                        '<li>Digital Ocean - Melhor para aplicativos de alta largura de banda;</li>' +
+                                        '<li>Linode - Barato e confiável.</li>' +
+                                    '</ul>' +
+                                    '<br>' +
+                                    '<br>' +
+                                    '<a href="https://blog.back4app.com/pt/top-10-provedores-de-iaas/">Fonte</a>' +
+                                    '<h2>Exemplos práticos</h2>' +
+                                    'Exemplos de IaaS incluem:' +
+                                    '⦁	Amazon Web Services (AWS); <br>' +
+                                    '⦁	Elastic Compute Cloud (EC2);<br>' +
+                                    '⦁	Microsoft Azure Virtual Machines;<br>' +
+                                    '⦁	Google Compute Engine. ' +
+                                    '<br>' +
+                                    '<br>' + 
+                                    '<a href="https://www.dio.me/articles/iaas-paas-saas-e-caas-conceitos-exemplos-e-diferencas">Fonte</a>' +
+                                    '<h2>Imagens do funcionamento</h2>' +
+                                    '<img src="imagens/image-hierarquia-iaas-paas-saas.png" alt="A|imagem não carregou">' +
+                                    '<h2>Vantagens</h2>' +
+                                    '<h4>economia</h4>' +
+                                    'Como os recursos de IaaS são usados sob demanda e as empresas só <br>' +
+                                    'precisam pagar pelos recursos de computação, armazenamento e rede <br>' +
+                                    'que são realmente usados, os custos de IaaS são bastante previsíveis <br>' +
+                                    'e podem ser facilmente controlados e planejados. <br>' +
+	                                '<h4>confiabilidade</h4>' + 
+                                    'A IaaS não tem um ponto único de falha. Mesmo que um componente <br>' +
+                                    'dos recursos de hardware falhe, o serviço normalmente continuará <br>' +
+                                    'disponível.<br>' +
+                                    '<h4>eficiente</h4>' +
+                                    'Os recursos de IaaS estão disponíveis regularmente para as empresas <br>' +
+                                    'quando elas precisam. Como resultado, as empresas reduzem os atrasos <br>' +
+                                    'ao expandir a infraestrutura e, como alternativa, não gastam recursos<br>' +
+                                    'com o excesso de capacidade.<br>' +
+	                                '<h4>escalonável </h4>' +
+                                    'Uma das maiores vantagens da IaaS na computação em nuvem é a capacidade <br>' +
+                                    'de aumentar e diminuir os recursos rapidamente de acordo com as necessidades <br>' +
+                                    'da empresa.<br>' +
+                                    '<h4>Aumenta a produtividade</h4> ' +
+                                    'Como o provedor de nuvem é responsável por configurar e manter a <br>' +
+                                    'infraestrutura física subjacente, os departamentos de TI das empresas <br>' +
+                                    'economizam tempo e dinheiro e podem redirecionar recursos para atividades <br>' +
+                                    'mais estratégicas.' +
+	                                '<h4>Tempo de lançamento fica mais rápido</h4>' +
+                                    'Como a IaaS oferece flexibilidade e escalonabilidade praticamente <br>' +
+                                    'infinitas, as empresas podem fazer seu trabalho com mais eficiência, <br>' +
+                                    'garantindo ciclos de desenvolvimento mais rápidos.' +
+                                    '<br>' +
+                                    '<br>' +
+                                    '<a href="https://cloud.google.com/learn/what-is-iaas?hl=pt-BR#what-is-iaas">Fonte</a>' +
+                                    '<h2>Desvantagens</h2>' +
+                                    '<ul type="disc">' +
+                                        '<li>Problemas de segurança de dados devido à arquitetura multilocatário </li>' +
+                                        '<li>Interrupções de fornecedores impedem que os clientes acessem seus dados por um tempo </li>' +
+                                        '<li>A necessidade de treinamento da equipe para aprender a gerenciar novas infraestruturas</li>' +
+                                    '</ul>' +
+                                    '<br>' +
+                                    '<a href="https://sam-solutions.com/blog/iaas-vs-paas-vs-saas-whats-the-difference/">Fonte</a>' +
+
+                                    '<h2>Tipos</h2>' +
+                                    'Não existem "tipos" de IaaS no sentido de modelos diferentes, mas sim de provedores que <br>' +
+                                    'oferecem serviços de IaaS, como Amazon Web Services (AWS), Microsoft Azure e <br> ' +
+                                    'Google Cloud Platform (GCP).';
+                                }else{
+                                    if(resp == "Virtualização"){
+                                        Resposta.innerHTML = '<h2>Informações completas</h2>' +
+                                            'A virtualização cria um ambiente de computação simulado ou virtual em vez de um <br> ' +
+                                            'ambiente físico. Ela costuma incluir versões de hardware, sistemas operacionais, <br> ' +
+                                            'dispositivos de armazenamento e outros, todas geradas por computador. Isso permite que <br> ' +
+                                            'as organizações particionem um único computador físico ou servidor em diversas máquinas <br> ' +
+                                            'virtuais. Cada máquina virtual pode interagir de forma independente e executar diferentes <br> ' +
+                                            'sistemas operacionais ou aplicativos ao mesmo tempo em que compartilha os recursos de uma <br> ' +
+                                            'única máquina host. <br>' +
+                                            'Ao criar múltiplos recursos de um único computador ou servidor, a virtualização <br> ' +
+                                            'aprimora a escalabilidade e as cargas de trabalho ao mesmo tempo que utiliza menos <br> ' +
+                                            'servidores, gasta menos energia e requer menos custos de infraestrutura e manutenção. <br> ' +
+                                            'Há quatro categorias principais de virtualização. A primeira é a virtualização de área <br> ' +
+                                            'de trabalho, que permite que um servidor centralizado distribua e gerencie áreas de trabalho <br> ' +
+                                            'individualizadas. A segunda é a virtualização de rede, desenvolvida para dividir a largura <br> ' +
+                                            'de banda da rede entre canais independentes que são posteriormente atribuídos a servidores ou <br> ' +
+                                            'dispositivos específicos. A terceira categoria é a virtualização de software, que separa <br> ' +
+                                            'aplicativos do hardware e do sistema operacional. E, por fim, a quarta é a virtualização de <br> ' +
+                                            'armazenamento, que combina múltiplos recursos de armazenamento de rede em um único dispositivo <br> ' +
+                                            'que pode ser acessado por diversos usuários.<br> ' +
+                                            '<a href="https://azure.microsoft.com/pt-br/resources/cloud-computing-dictionary/what-is-virtualization">Fonte</a>' +
+                                            
+                                            '<h2>Empresas que fornecem</h2>' +
+                                            '<h4> Nuvem V2 </h4>' +
+                                            'O V2 Cloud é uma plataforma de virtualização robusta para provisionamento <br>' +
+                                            'remoto de desktops e aplicativos para pequenas e médias empresas (PMEs);' +
+                                            '<h4>Caixa Virtual Oracle VM</h4>' +
+                                            'O Oracle VM VirtualBox é outra plataforma de virtualização renomada. As equipes <br>' +
+                                            'de DevOps utilizam o VirtualBox para reduzir custos e acelerar a implantação <br> '+
+                                            'segura de aplicativos;' +
+                                            ' <h4>VMware vSphere</h4>' +
+                                            'O VMware vSphere é uma plataforma de virtualização de nível empresarial <br>' +
+                                            'reconhecida por sua robustez e escalabilidade. Ela oferece às organizações <br>' +
+                                            'ferramentas abrangentes para o gerenciamento de ambientes virtuais, incluindo <br>' +
+                                            'alta disponibilidade, alocação de recursos e gerenciamento centralizado;<br>' +
+                                            '<h4>Microsoft Azure Hyper-V</h4>' +
+                                            'O Microsoft Azure Hyper-V é um hipervisor nativo integrado aos sistemas <br>' +
+                                            'operacionais Windows Server. A integração do Hyper-V com ferramentas do <br>' +
+                                            'ecossistema Microsoft, como o System Center, permite o gerenciamento perfeito <br>' +
+                                            'de ambientes virtualizados.' +
+                                            '<br>' +
+                                            '<a href="https://v2cloud.com/blog/top-5-virtualization-platforms">Fonte</a>' +
+                                            '<h2>Exemplos práticos</h2>' +
+                                            'Exemplos de infraestrutura de virtualização incluem servidores virtuais em <br>' +
+                                            'nuvem como o Amazon EC2, plataformas de virtualização para desktops como o <br>' +
+                                            'VMware Horizon, e ferramentas de virtualização a nível de sistema operacional <br>' +
+                                            'como o Docker, que permite a execução de aplicações em contêineres isolados <br>' +
+                                            'em vez de máquinas virtuais completas. As infraestruturas virtualizadas também <br>' +
+                                            'abrangem soluções de armazenamento, rede virtualizada e ferramentas de gestão <br>' +
+                                            'para provisionar, monitorizar e gerir recursos virtuais de forma eficiente.<br>' +
+                                            '<h4>fonte: IA (visão geral do google)</h4>' +
+                                            '<h2>Imagens do funcionamento</h2>' +
+                                            '<img src="imagens/Virtualizacao.jpg" alt="A imagem não carregou">' +
+                                            '<h2>Vantagens</h2>' +
+                                            '<mark>° Sistemas mais seguros:</mark> As máquinas virtuais trabalham de forma <br>' +
+                                            'independente, isoladas umas das outras, inclusive do local hospedeiro (host). <br>' +
+                                            'Existem diferentes tipos de segurança e sistemas operacionais para cada serviço, <br>' +
+                                            'individualmente.<br>' +
+                                            '<mark>° Custos reduzidos:</mark> Quem pensa que para se trabalhar com <br>' +
+                                            'virtualização e com sistemas mais modernos precisa gastar absurdos, está <br>' +
+                                            'enganado. Gasta-se muito pouco com hardware, computadores e outros dispositivos.<br>' +
+                                            '<mark>°  Economia de energia:</mark> Com os sistemas virtualizados, também é <br>' +
+                                            'possível economizar bastante com eletricidade. Isso acontece por causa da <br>' +
+                                            'redução de hardware: menos máquinas ligadas, menos energia elétrica consumida.<br>' +
+                                            '<mark>°  Economia de espaço físico:</mark> Com menos máquinas e dispositivos, <br>' +
+                                            'há uma considerável redução de utilização de espaço físico nas empresas. Além <br>' +
+                                            'disso, não é mais necessário contar com salas com temperatura específica, o que <br>' +
+                                            'representa mais um tipo de economia.<br>' +
+                                            '<mark>°  Menos hardwares ociosos ou inativos:</mark> Não existem hardwares <br>' +
+                                            'ociosos com a virtualização. Os recursos são alocados de maneira mais eficiente <br>' +
+                                            'entre as máquinas virtuais. Acompanhar esse processo, junto com uma solução <br>' +
+                                            'sólida de backup e recuperação, garantirá que você mantenha a integridade de <br>' +
+                                            'seus dados sólida e qualquer tempo de inatividade mínimo.<br>' +
+                                            '<mark>° Segurança de dados:</mark> Todos os dados referentes à propriedade <br>' +
+                                            'intelectual ficam seguros dentro do banco de dados da empresa. Uma vez que são <br>' +
+                                            'armazenados em vários locais diferentes, se ocorrer um desastre, os dados podem <br>' +
+                                            'ser recuperados facilmente.<br>' +
+                                            '<mark>°  Facilidade de migração de ambientes:</mark> Com a virtualização de <br>' +
+                                            'software você consegue evitar todo o trabalho de reinstalação e configuração dos <br>' +
+                                            'sistemas. Ele fornece flexibilidade ao usuário para que ele possa modificar o <br>' +
+                                            'software de acordo com as migrações necessárias. A modificação pode ser feita em <br>' +
+                                            'minutos e pode ser ajustada facilmente quando a carga de trabalho muda. <br>' +
+                                            '<a href="https://okser.com.br/blog/10-vantagens-da-virtualizacao-de-software/">Fonte</a>' +
+                                            '<h2>Desvantagens</h2>' +
+                                            '<mark>° Sobrecarga de Tarefas:</mark> Ligar várias máquinas virtuais ao mesmo tempo <br>' +
+                                            'pode causar uma grande sobrecarga, fazendo com que elas parem de funcionar. Por isso, <br>' +
+                                            'o ideal é executar o número de virtualizações que o seu computador tenha capacidade de <br>' +
+                                            'suportar.<br>' +
+                                            '<mark>° Segurança:</mark> O VMM ou Monitor de Máquina Virtual é um software <br>' +
+                                            'responsável pela abstração da máquina virtual.<br>' +
+                                            'Caso algum problema ocorra com ele, todas as demais máquinas virtuais ficarão <br>' +
+                                            'vulneráveis, inclusive em termos de ataques de vírus, com um ambiente afetando <br>' +
+                                            'o outro.<br>' +
+                                            '<mark>° Gastos:</mark> Embora a virtualização te ajude a economizar com novos <br>' +
+                                            'hardwares, você pode precisar de mais manutenção. Isso acontece porque o <br>' +
+                                            'desempenho exigido da máquina é muito maior, causando mais desgastes de uso.<br>' +
+                                            '<mark>° Memória RAM:</mark> A virtualização gera um grande consumo de memória <br>' +
+                                            'RAM,  já que cada máquina virtual vai ocupar uma área separada desse recurso. <br>' +
+                                            '<a href="https://4infra.com.br/vantagens-e-desvantagens-da-virtualizacao/">Fonte</a>' +
+
+                                            '<h2>Tipos</h2>' +
+                                            '<mark>° Virtualização de servidores:</mark> A virtualização de servidores é um processo que <br>' +
+                                            'particiona um servidor físico em vários servidores virtuais. É uma maneira <br>' +
+                                            'eficiente e econômica de usar recursos de servidor e implantar serviços de TI <br>' +
+                                            'em uma organização.<br>' +
+                                            '<mark>° Virtualização de armazenamento:</mark> A virtualização de armazenamento <br>' +
+                                            'combina as funções de dispositivos de armazenamento físico, como Network <br>' +
+                                            'Attached Storage (NAS – Armazenamento conectado à rede) e Storage Area Network <br>' +
+                                            '(SAN – Rede de área de armazenamento)<br>' +
+                                            '<mark>° Virtualização de rede:</mark> Todas as redes de computadores têm <br>' +
+                                            'elementos de hardware como switches, roteadores e firewalls. Uma organização <br>' +
+                                            'com escritórios em várias localizações geográficas pode ter várias tecnologias <br>' +
+                                            'de rede diferentes trabalhando juntas para criar a rede corporativa. <br>' +
+                                            'A virtualização de rede é um processo que combina todos esses recursos de rede <br>' +
+                                            'para centralizar as tarefas administrativas.<br>' +
+                                            '<mark>° Virtualização de aplicações:</mark> A virtualização de aplicações extrai <br>' +
+                                            'as funções das aplicações para serem executadas em sistemas operacionais <br>' +
+                                            'diferentes daqueles em que foram projetadas para serem executadas.<br>' +
+                                            '<a href="https://aws.amazon.com/pt/what-is/virtualization/">Fonte</a>';
+                                    }else{
+                                        Resposta.innerHTML = 'Infelizmente não foi possível realizar sua busca, desculpe &#128549;';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+            })
+
+        </script>
+        
+
+       
+    </body>
+</html>
